@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>program1</title>
+</head>
+
+<body>
+    <script>
+        function convert(n) {
+            document.write("Number of seconds: " + n + '<br />')
+            var hour = parseInt(n / 3600);
+
+            n %= 3600;
+            var minutes = n / 60;
+
+            n %= 60;
+            var seconds = n;
+            
+            document.write(
+                "hours = " + hour + ", " + "minutes = " + minutes.toFixed() + ", "
+                + "seconds = " + seconds.toFixed()
+            );
+        }
+        var n = prompt("Number of seconds: ")
+        convert(n);
+    </script>
+</body>
+</html>
